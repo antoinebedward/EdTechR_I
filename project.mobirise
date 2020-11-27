@@ -45,7 +45,7 @@
     ],
     "imageResize": true,
     "publishChangesOnly": false,
-    "uniqCompNum": 0,
+    "uniqCompNum": 2,
     "versionPublish": "5.2.0"
   },
   "pages": {
@@ -480,6 +480,161 @@
           "_anchor": "features2-b",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 10px)",
+            "padding-bottom": "(@paddingBottom * 10px)",
+            "background-color": "@bg",
+            ".title": {
+              "margin-top": "50px"
+            },
+            ".mbr-section-title": {
+              "margin-bottom": "20px"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#0067da"
+            },
+            ".mbr-row > div:not(.push) when not (@imgMargin)": {
+              "margin-top": "40px"
+            },
+            ".mbr-row > div.push when (@imgMargin)": {
+              "margin-top": "40px"
+            },
+            ".image": {
+              "width": "100%",
+              "height": "(@imgHeight * 1px)",
+              "transition-duration": ".3s",
+              "amp-img": {
+                "position": "relative",
+                "object-fit": "cover"
+              },
+              "img": {
+                "object-fit": "cover"
+              }
+            },
+            ".image:hover": {
+              "transform": "translateY(-8px)",
+              "transition-timing-function": "ease-out"
+            },
+            ".inner-item": {
+              "width": "100%"
+            },
+            ".img-btn": {
+              "transform": "translateY(-50%)",
+              ".img-btn-inner": {
+                "display": "inline-block",
+                "width": "auto",
+                "background-color": "@bgCard",
+                "padding": "12px 24px",
+                "white-space": "nowrap",
+                "border-style": "solid",
+                "border-width": "5px 5px 2px",
+                "border-color": "@bgCard",
+                "box-shadow": "0px 15px 60px 0px rgba(0, 0, 0, 0.1)"
+              },
+              "p": {
+                "color": "#060606"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".mbr-row > div": {
+                "margin-top": "0"
+              },
+              ".mbr-row": {
+                "flex-direction": "column"
+              }
+            },
+            ".img-btn, .img-btn-inner": {
+              "text-align": "center"
+            }
+          },
+          "_name": "content2",
+          "_sourceTheme": "courseamp",
+          "_customHTML": "<section class=\"content2\" group=\"Content\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- <header>Section Params</header> -->\n\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n              <header>Text</header>\n\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n\t<!-- <header>Hover Params</header> -->\n\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\t\t<select name=\"textAlign\" title=\"Text\">\n\t\t\t<option value=\"1\">Left</option>\n\t\t\t<option value=\"2\" selected>Center</option>\n\t\t\t<option value=\"3\">Right</option>\n\t\t</select>\n        <header>Card</header>\n\t<input type=\"range\" inline title=\"Image Height\" name=\"imgHeight\" min=\"150\" max=\"500\" step=\"10\" value=\"290\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"imgMargin\" checked>\n\t<select title=\"Cards Amount\" name=\"cardsAmount\">\n\t\t<option value=\"1\">1</option>\n\t\t<option value=\"2\">2</option>\n\t\t<option value=\"3\" selected>3</option>\n\t\t<option value=\"4\">4</option>\n\t</select>\n        <input type=\"color\" title=\"Background Card\" name=\"bgCard\" value=\"#ffffff\">  \n\t<!-- <header>Show/Hide Params</header> -->\n  <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#ffffff\">\n\t</mbr-parameters>\n    \n\n\t<div class=\"container\">\n\t\t\t\t<div class=\"title mbr-pb-5\" mbr-class=\"{'align-left': textAlign == 1, 'align-center': textAlign == 2, 'align-right': textAlign == 3}\">\n\t\t\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-subtitle\">START HERE\n\t\t\t\t\t\t</h3>\n\n\t\t\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><b>Our Team</b></h1>\n\t\t\t\t\t\t<p class=\"signature mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-6\" data-app-selector=\".signature\">\n\t\t\t\t\t\t\tthe ultimate planning solution <br> for busy people who want to reach their personal goals</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t     \n\t\t\t\t\t\n\t\t\t\t\t <div class=\"mbr-row mbr-jc-c\">\n\t\t<div class=\" mbr-col-sm-12  mbr-col-md-6 mbr-col-lg-3\">\n                    <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/profile-pic-adb-506x426.jpg\" alt=\"image\" height=\"290\" width=\"344.4600938967136\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/profile-pic-adb-506x426.jpg\" class=\"mbr-temp\" alt>\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t <div class=\"img-btn align-center\">\n\t\t\t\t \t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".img-btn, .img-btn-inner\"><b>ANTOINE BEDWARD</b><br><b>Assistant Director<br></b><b><br></b></p>\n\t\n</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"push mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>1\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n                    \n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/face2.jpg\" alt=\"image\" height=\"290\" width=\"290\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/face2.jpg\" class=\"mbr-temp\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".img-btn, .img-btn-inner\"><b>NAVNEET KAUR</b><br><b>UX Research<br></b></p>\n\t\t\t</div>\n                    </div>\n\t\t</div>\n\t\t<div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>2\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n                    \n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/i-fs-yvi-400x400-192x192.png\" alt=\"image\" height=\"290\" width=\"290\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/i-fs-yvi-400x400-192x192.png\" class=\"mbr-temp\" alt>\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".img-btn, .img-btn-inner\"><b>SAM LOUDEN</b><br><b>Product Owner<br></b></p>\n\t\t\t</div>\n                </div>\n\t\t</div>\n\t\t<div class=\"push mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>3\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/face4.jpg\" alt=\"image\" height=\"9\" width=\"16\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/face4.jpg\" class=\"mbr-temp\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".img-btn, .img-btn-inner\"><b>DANIEL JOHNSON</b></p>\n\t\t\t\t\t</div>\n                </div>\n\t\t\t</div>\n\t\t\t</div>\n\t</div>\n</section>",
+          "_cid": "shAfebYjKT",
+          "_anchor": "content2-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 10px)",
+            "padding-bottom": "(@paddingBottom * 10px)",
+            "background-color": "@bg",
+            ".title": {
+              "margin-top": "50px"
+            },
+            ".mbr-section-title": {
+              "margin-bottom": "20px"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#0067da"
+            },
+            ".mbr-row > div:not(.push) when not (@imgMargin)": {
+              "margin-top": "40px"
+            },
+            ".mbr-row > div.push when (@imgMargin)": {
+              "margin-top": "40px"
+            },
+            ".image": {
+              "width": "100%",
+              "height": "(@imgHeight * 1px)",
+              "transition-duration": ".3s",
+              "amp-img": {
+                "position": "relative",
+                "object-fit": "cover"
+              },
+              "img": {
+                "object-fit": "cover"
+              }
+            },
+            ".image:hover": {
+              "transform": "translateY(-8px)",
+              "transition-timing-function": "ease-out"
+            },
+            ".inner-item": {
+              "width": "100%"
+            },
+            ".img-btn": {
+              "transform": "translateY(-50%)",
+              ".img-btn-inner": {
+                "display": "inline-block",
+                "width": "auto",
+                "background-color": "@bgCard",
+                "padding": "12px 24px",
+                "white-space": "nowrap",
+                "border-style": "solid",
+                "border-width": "5px 5px 2px",
+                "border-color": "@bgCard",
+                "box-shadow": "0px 15px 60px 0px rgba(0, 0, 0, 0.1)"
+              },
+              "p": {
+                "color": "#060606"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".mbr-row > div": {
+                "margin-top": "0"
+              },
+              ".mbr-row": {
+                "flex-direction": "column"
+              }
+            }
+          },
+          "_name": "content2",
+          "_sourceTheme": "courseamp",
+          "_customHTML": "<section class=\"content2\" group=\"Content\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- <header>Section Params</header> -->\n\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n              <header>Text</header>\n\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n\t<!-- <header>Hover Params</header> -->\n\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n\t\t<select name=\"textAlign\" title=\"Text\">\n\t\t\t<option value=\"1\">Left</option>\n\t\t\t<option value=\"2\" selected>Center</option>\n\t\t\t<option value=\"3\">Right</option>\n\t\t</select>\n        <header>Card</header>\n\t<input type=\"range\" inline title=\"Image Height\" name=\"imgHeight\" min=\"150\" max=\"500\" step=\"10\" value=\"290\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"imgMargin\" checked>\n\t<select title=\"Cards Amount\" name=\"cardsAmount\">\n\t\t<option value=\"1\">1</option>\n\t\t<option value=\"2\" selected>2</option>\n\t\t<option value=\"3\">3</option>\n\t\t<option value=\"4\">4</option>\n\t</select>\n        <input type=\"color\" title=\"Background Card\" name=\"bgCard\" value=\"#ffffff\">  \n\t<!-- <header>Show/Hide Params</header> -->\n  <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#ffffff\">\n\t</mbr-parameters>\n    \n\n\t<div class=\"container\">\n\t\t\t\t<div class=\"title mbr-pb-5\" mbr-class=\"{'align-left': textAlign == 1, 'align-center': textAlign == 2, 'align-right': textAlign == 3}\">\n\t\t\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-subtitle\"></h3>\n\n\t\t\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h1>\n\t\t\t\t\t\t<p class=\"signature mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-6\" data-app-selector=\".signature\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t\t     \n\t\t\t\t\t\n\t\t\t\t\t <div class=\"mbr-row mbr-jc-c\">\n\t\t<div class=\" mbr-col-sm-12  mbr-col-md-6 mbr-col-lg-3\">\n                    <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/7ogbxpws-400x400-400x400.jpg\" alt=\"image\" height=\"290\" width=\"290\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/7ogbxpws-400x400-400x400.jpg\" class=\"mbr-temp\" alt>\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t <div class=\"img-btn align-center\">\n\t\t\t\t \t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".img-btn, .img-btn-inner\"><b>JOSIANNE DESCHATELE</b><b>TS</b><br><b>Product Owner<br></b></p>\n\t\n</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"push mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>1\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n                    \n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/mqvjmprx-400x400-400x400.jpg\" alt=\"image\" height=\"290\" width=\"290\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mqvjmprx-400x400-400x400.jpg\" class=\"mbr-temp\" alt>\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-6\" data-app-selector=\".img-btn, .img-btn-inner\"><b>KSENIA CHEINMAN</b><br><b>Manager Research &amp; Strategy<br></b></p>\n\t\t\t</div>\n                    </div>\n\t\t</div>\n\t\t<div class=\"mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>2\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n                    \n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/face3.jpg\" alt=\"image\" height=\"9\" width=\"16\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/face3.jpg\" class=\"mbr-temp\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".img-btn, .img-btn-inner\"><b>OLIVER WILLIAMS</b></p>\n\t\t\t</div>\n                </div>\n\t\t</div>\n\t\t<div class=\"push mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>3\">\n            <div class=\"inner-item\">\n\t\t\t\t<div class=\"image\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/face4.jpg\" alt=\"image\" height=\"9\" width=\"16\" layout=\"responsive\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder class=\"placeholder\"></div>\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/face4.jpg\" class=\"mbr-temp\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t\t<div class=\"img-btn align-center\">\n\t\t\t\t\t\t<p class=\"img-btn-inner mbr-section-subtitle mbr-pb-2 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".img-btn, .img-btn-inner\"><b>DANIEL JOHNSON</b></p>\n\t\t\t\t\t</div>\n                </div>\n\t\t\t</div>\n\t\t\t</div>\n\t</div>\n</section>",
+          "_cid": "shAfljpEQv",
+          "_anchor": "content2-1",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
